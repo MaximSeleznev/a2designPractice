@@ -1,0 +1,137 @@
+@font-face 
+    font-family: "Roboto"
+    src: url("../fonts/Roboto-Regular.ttf")
+@font-face 
+    font-family: "Roboto-Light"
+    src: url("../fonts/Roboto-Light.ttf")
+@font-face 
+    font-family: "Roboto-Bold"
+    src: url("../fonts/Roboto-Bold.ttf")
+    
+*
+    box-sizing: border-box
+    font-family: Roboto
+body 
+    background: url("../img/background.png") no-repeat fixed
+    background-size:  cover
+
+header
+    position: fixed
+    width: 100vw
+    height: 108px
+    top: 0px
+    background: #2E2E2E
+    justify-content: space-between
+    display: flex
+    padding: 0 300px
+    z-index: 100
+
+    p 
+        font-weight: 500
+        font-size: 42px
+        line-height: 42px
+        display: flex
+        align-items: center
+        color: #FFFFFF
+
+.home 
+    padding: 200px 300px 80px
+    width: 100%
+
+    &-content 
+        width: 840px
+        height: 520px
+        background: rgba(255, 255, 255, 0.95)
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25)
+        border-radius: 16px
+        margin: 0 auto
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-around
+
+        h1 
+            font-weight: 500
+            font-size: 42px
+            line-height: 42px
+            text-align: center
+            color: #000000
+            margin: 0
+
+        &-link
+            width: 412px
+            height: 110px
+            background: #3E3E3E
+            border-radius: 64px
+            display: flex
+            justify-content: center
+            align-items: center
+            font-weight: 500
+            font-size: 42px
+            line-height: 42px
+            color: #FFFFFF
+            text-align: center
+
+.news 
+    padding: 200px 300px 111px
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+
+    &-greetings
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        position: relative
+        margin-bottom: 51px
+
+        svg 
+            // margin-right: 32px
+            position: absolute
+            left: -134px
+            top: 50px
+
+
+    h1 
+        width: 571px
+        height: 155px
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        background: rgba(255, 255, 255, 0.95)
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25)
+        border-radius: 16px
+
+    &-cards 
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+        align-items: 
+        width: 900px
+
+        &-card 
+            max-width: 400px
+            background: rgba(255, 255, 255, 0.95)
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25)
+            border-radius: 16px
+            margin: 20px
+            padding: 30px
+
+            p 
+                font-weight: 500
+                font-size: 24px
+                line-height: 24px
+                color: #2E2E2E
+
+            &-nickname
+                font-family: Roboto-Bold
+
+
+                &-smallText 
+                    font-family: Roboto-Light
+                    font-size: 24px
+                    line-height: 24px
+                    color: #2E2E2E
