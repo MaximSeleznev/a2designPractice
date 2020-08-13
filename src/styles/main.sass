@@ -105,6 +105,16 @@ header
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25)
         border-radius: 16px
 
+    &-types 
+        display: flex
+        width: 30vw
+        justify-content: space-between
+        align-items: center
+        font-size: 18px
+
+        p[data-active="true"]
+            text-decoration: underline
+
     &-cards 
         display: flex
         flex-flow: row wrap
@@ -119,6 +129,7 @@ header
             border-radius: 16px
             margin: 20px
             padding: 30px
+            position: relative
 
             p 
                 font-weight: 500
@@ -135,3 +146,12 @@ header
                     font-size: 24px
                     line-height: 24px
                     color: #2E2E2E
+
+            &-type 
+                font-family: Roboto-Light
+                color: #2d2d2d
+                font-size: 18px!important
+                position: absolute
+                bottom: 0
+.hide 
+    display: none
