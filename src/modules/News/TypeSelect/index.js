@@ -2,7 +2,7 @@ import React from 'react';
 
 const TypeSelect = props => {
     const { type, isActive,} = props;
-    function displayType(e) {
+    const displayType = (e) => {
         e.preventDefault();
         let cards = document.querySelectorAll(".news-cards-card")
         let types = document.querySelectorAll(".news-types p")
@@ -10,14 +10,14 @@ const TypeSelect = props => {
             item.dataset.active="false"
         })
         e.target.dataset.active="true"
-        if (e.target.dataset.newsType == "all") {
+        if (e.target.dataset.newsType === "all") {
             cards.forEach((card) => {
                 card.classList.remove("hide")
             })
             return
         }
         cards.forEach((card) => {
-            if (card.dataset.cardType != e.target.dataset.newsType) {
+            if (card.dataset.cardType !== e.target.dataset.newsType) {
                 card.classList.add("hide")
             } else {
                 card.classList.remove("hide")

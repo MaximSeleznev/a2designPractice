@@ -4,17 +4,16 @@ import Header from '../Header';
 import TypeSelect from './TypeSelect'
 import news from './news.json';
 import '../../styles/main.sass';
-import { Link, useRouteMatch } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { ReactComponent as ArrowIcon } from '../../assets/svg/arrow.svg'
 
 
 const News = () => {
-    let newsFiltered = ["all"]
-    for (let item of news) {
-        if (!newsFiltered.includes(item.type)) {
-            newsFiltered.push(item.type);
-        }
-    }
+
+    const newsFiltered = news.reduce((total, current) => {
+        if (!total.includes(current.type)) total.push(current.type)
+        return total
+    }, ["all"])
     
     return (
         <div>
